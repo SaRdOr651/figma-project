@@ -1,7 +1,17 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.2s;
+}
+
+*:hover {
+  transition: 0.2s;
+}
+
+*:active {
+  transition: 0.2s ease;
 }
 
 body {
@@ -104,9 +114,22 @@ body {
   display: inline-block;
 }
 
+.catalog-btn:active {
+  transform: scale(1.2);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(1.2);
+}
+
 .catalog-btn {
   background-color: red;
   color: #fff;
+  cursor: pointer;
   border-radius: 30px;
   padding: 10px 13px;
   border: none;
@@ -150,6 +173,10 @@ body {
 
 .deleveryMaBoy-a {
   text-decoration: none;
+}
+
+.deliveryMaBoy:active {
+  transform: scale(1.2);
 }
 
 .deliveryMaBoy-right {
@@ -208,6 +235,10 @@ body {
   transition: 0.25s;
 }
 
+.HeartAndHuman:active {
+  transform: scale(1.2);
+}
+
 .HeartAndHuman:hover svg:nth-child(2) {
   opacity: 0;
   transition: 0.25s;
@@ -259,6 +290,10 @@ body {
   transition: 0.25s;
 }
 
+.CORZAYNA:active {
+  transform: scale(1.2);
+}
+
 .CORZAYNA svg:nth-child(1) {
   opacity: 1;
   transition: 0.25s;
@@ -267,4 +302,160 @@ body {
 .CORZAYNA:hover svg:nth-child(1) {
   opacity: 0;
   transition: 0.25s;
+}
+
+.HMPD-btn {
+  border: 1px solid #FFD481;
+  background-color: #FFF8EB;
+  border-radius: 16px;
+  width: 164px;
+  height: 48px;
+  font-size: 18px;
+}
+
+.header-main-part-down {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: -25px;
+}
+
+.HMPD-btn:hover {
+  border: 1px solid #FFCB67;
+  background-color: #FFE8BC;
+}
+
+/*-----------------------------------------------------------------
+             SLIDER PART MA BOY AYOOOOOOOOOO
+-------------------------------------------------------------------*/
+.slider {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Скрываем стандартные кружочки radio-кнопок */
+.slider input[type=radio] {
+  display: none;
+}
+
+/* Лента со слайдами */
+.slides {
+  display: flex;
+  width: 300%; /* 100% * количество слайдов */
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Сдвиг ленты в зависимости от выбранного input */
+#s1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#s2:checked ~ .slides {
+  transform: translateX(-33.333%);
+}
+
+#s3:checked ~ .slides {
+  transform: translateX(-66.666%);
+}
+
+/* Общие стили для стрелок */
+.arrows {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* Чтобы не блокировать клики по слайду */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 22px;
+  border-radius: 50%;
+  display: none; /* Скрыты по умолчанию */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.prev {
+  left: 16px;
+}
+
+.next {
+  right: 16px;
+}
+
+/* Показываем нужную пару стрелок для каждого активного слайда */
+#s1:checked ~ .arrows .for-s1,
+#s2:checked ~ .arrows .for-s2,
+#s3:checked ~ .arrows .for-s3 {
+  display: flex;
+}
+
+/* Нижние точки-индикаторы */
+.dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dots label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#s1:checked ~ .dots label[for=s1],
+#s2:checked ~ .dots label[for=s2],
+#s3:checked ~ .dots label[for=s3] {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+.cards-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.cards-2 .cards-card:nth-child(1) {
+  background-color: radial;
 }/*# sourceMappingURL=style.css.map */
