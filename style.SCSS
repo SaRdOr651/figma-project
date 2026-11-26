@@ -15,6 +15,7 @@
 
 body {
   background-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 @font-face {
@@ -464,11 +465,258 @@ button:active {
   justify-content: center;
   align-items: center;
   gap: 50px;
+}
+.cards-2 .cards-card {
+    height: 190px;
+    border-radius: 16px;
+    width: 404px;
+    margin-top: 30px;
 
 }
 
+.cards-card:nth-child(1) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cards-card:nth-child(1) p {
+    font-size: 25px;
+    color: #3E5828;
+    margin-top: 40px;
+
+}
+
+
+
+.cards-card:nth-child(1) img  {
+height: 100%;
+width: 70%;
+}
 .cards-2 .cards-card:nth-child(1) {
-  background-color: radial;
+  background: radial-gradient(#CEEEB5 , #A9D288);
+
+
 
 
 }
+
+.cards-card:nth-child(2) div {
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.cards-card:nth-child(2) div p {
+    color: white;
+    margin-top: 20px;
+    font-size: 25px;
+
+}
+
+
+.cards-card:nth-child(2) {
+    background: radial-gradient(#ff0000,#FF3103);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide {
+    position: relative;
+
+}
+.position-p {
+    color: white;
+    font-size: 33px;
+    left: 100px;
+    top: 150px;
+    position: absolute;
+}
+
+
+
+.slide-btn {
+  border: 2px solid white;
+  color: white;
+  background: none;
+  font-size: 25px;
+
+  border-radius: 34px;
+  position: absolute;
+  left: 100px;
+  top: 300px;
+  padding: 10px 20px;
+}
+
+
+/* ------------------------------------------
+      DISCOUNTS
+--------------------------------------------*/
+
+.Discounts-zagalok {
+  margin-top: 50px;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  h3 {
+    
+
+    &::after {
+      content: "Смотреть всё >";
+      color: #DA9000;
+      background-color: #FFF8EB;
+      border: 1px solid #FFE7B9;
+      padding: 5px 5px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 16px;
+      font-weight: 600;
+      transition: 0.5s;
+    }
+
+    &:hover::after {
+        color: #fff;
+        background-color: #FFA900;
+        transition: 0.5s;
+      }
+  }
+  span {
+    display: flex;
+    border-radius: 20px;
+    background-color: #FFF8EB;
+    border: 1px solid #FFE7B9;
+    color: #FFA900;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    gap: 10px;
+    p {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      &:hover {
+      color: #fff;
+      background-color: #FFA900;
+      
+      }
+    }
+  }
+} 
+
+
+
+.DISPLAY-FLEX-TO-DISCOUNTS {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.main-part10 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+ 
+
+}
+
+.main-card {
+    .procent {
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      border-radius: 20px  0 20px 0;
+      background-color: red;
+      color: #fff;
+      width: 35px;
+      font-weight: 700;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 35px;
+    }
+    button {
+      border: 1.4px solid #ff0000;
+      color: #ff0000;
+      background-color: #fff;
+      border-radius: 19px;
+      padding: 10px 10px;
+      font-size: 16px;
+      &:hover {
+        background-color: #ff0000;
+        color: #fff;
+      }
+    }
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #dadada;
+    height: 406px;
+    width: 304px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    align-items: center;
+    
+    .fully-description {
+      padding: 10px 10px;
+    }
+    .description {
+      font-weight: 600;
+      font-size: 20px;
+      text-align: left;
+ 
+    }
+    .sales1 {
+      color: #8a8a8a;
+      margin-top: 10px;
+      display: flex;
+      font-size: 14px;
+      justify-content: space-between;
+      width: 100%;
+
+    }
+    .sales2 {
+      display: flex;
+      flex-direction: column;
+      p:nth-child(1) {
+        font-size: 24px;
+        color:  #fF0000;
+      }
+      p:nth-child(2) {
+        text-decoration: line-through;
+        font-size: 20px;
+        color: #aaa;
+      }
+    }
+
+    .div-sales2{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+    }
+    .div-img:nth-child(1) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 75%;
+        height: 100%;
+      }
+      width: 100%;
+      height: 200px;
+
+    }
+  
+  }
